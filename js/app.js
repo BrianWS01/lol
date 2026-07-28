@@ -329,8 +329,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       let oHtml = '';
       analysis.objectives.forEach(o => {
         const iconCheck = o.suitable ? '✔' : '✖';
-        const badgeClass = o.suitable ? 'text-success' : 'text-muted opacity-50';
-        oHtml += `<div class="mb-1 ${badgeClass}">${o.icon} <strong>${iconCheck} ${o.name}</strong> (${o.score} pts)</div>`;
+        const checkColor = o.suitable ? 'text-success fw-bold' : 'text-danger fw-bold';
+        const textColor = o.suitable ? 'text-main' : 'text-muted';
+        oHtml += `<div class="mb-1 d-flex align-items-center gap-1">${o.icon} <span class="${checkColor}">${iconCheck}</span> <strong class="${textColor}">${o.name}</strong> <span class="fs-7 text-dim">(${o.score} pts)</span></div>`;
       });
       objBox.innerHTML = oHtml;
     }
@@ -339,7 +340,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const matchupBox = document.getElementById('laneMatchupsBox');
     if (matchupBox) {
       if (analysis.matchups.length === 0) {
-        matchupBox.innerHTML = '<span class="text-muted fs-7">Selecione campeões opostos nas lanes para calcular matchups.</span>';
+        matchupBox.innerHTML = '<span class="text-muted fs-7 fw-medium">Selecione campeões opostos nas lanes para calcular matchups.</span>';
       } else {
         let mHtml = '';
         analysis.matchups.forEach(m => {
@@ -360,7 +361,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const synBox = document.getElementById('synergiesBox');
     if (synBox) {
       if (analysis.synergies.length === 0) {
-        synBox.innerHTML = '<span class="text-muted fs-7">Nenhuma sinergia de combo detectada ainda.</span>';
+        synBox.innerHTML = '<span class="text-muted fs-7 fw-medium">Nenhuma sinergia de combo detectada ainda.</span>';
       } else {
         let sHtml = '';
         analysis.synergies.forEach(syn => {
@@ -379,7 +380,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const alertBox = document.getElementById('alertsBox');
     if (alertBox) {
       if (analysis.alerts.length === 0) {
-        alertBox.innerHTML = '<span class="text-muted fs-7">Composição equilibrada sem alertas críticos.</span>';
+        alertBox.innerHTML = '<span class="text-muted fs-7 fw-medium">Composição equilibrada sem alertas críticos.</span>';
       } else {
         let aHtml = '';
         analysis.alerts.forEach(a => {
@@ -392,9 +393,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 11. Recommendations (Picks & Bans)
     const recBox = document.getElementById('recommendationsBox');
     if (recBox) {
-      let rHtml = '<h6>Sugestões para o Próximo Pick:</h6>';
+      let rHtml = '<h6 class="text-gold fw-bold">Sugestões para o Próximo Pick:</h6>';
       if (analysis.pickSuggestions.length === 0) {
-        rHtml += '<span class="text-muted fs-7">Pool de campeões completa ou sem candidatos.</span>';
+        rHtml += '<span class="text-muted fs-7 fw-medium">Pool de campeões completa ou sem candidatos.</span>';
       } else {
         analysis.pickSuggestions.forEach(p => {
           rHtml += `

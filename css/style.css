@@ -14,11 +14,11 @@
   --red-side: #E84057;
   --red-glow: rgba(232, 64, 87, 0.3);
   --text-main: #FFFFFF;
-  --text-muted: #8A94A6;
-  --text-dim: #505A69;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-gold: rgba(200, 155, 60, 0.4);
-  --border-cyan: rgba(10, 200, 185, 0.4);
+  --text-muted: #CBD5E1;
+  --text-dim: #94A3B8;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(200, 155, 60, 0.5);
+  --border-cyan: rgba(10, 200, 185, 0.5);
   --success: #21C55E;
   --warning: #F59E0B;
   --danger: #EF4444;
@@ -28,6 +28,19 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* High Contrast Override for Dark Theme */
+.text-muted {
+  color: #CBD5E1 !important;
+}
+
+.text-dim {
+  color: #94A3B8 !important;
+}
+
+.opacity-50 {
+  opacity: 0.85 !important;
 }
 
 * {

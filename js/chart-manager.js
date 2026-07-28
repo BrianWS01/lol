@@ -50,8 +50,8 @@ class ChartManager {
             angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
             grid: { color: 'rgba(255, 255, 255, 0.1)' },
             pointLabels: {
-              color: '#8A94A6',
-              font: { family: 'Inter', size: 11, weight: '600' }
+              color: '#E2E8F0',
+              font: { family: 'Inter', size: 12, weight: '700' }
             },
             ticks: {
               display: false,
@@ -104,13 +104,13 @@ class ChartManager {
         scales: {
           x: {
             grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: { color: '#8A94A6', font: { family: 'Inter' } }
+            ticks: { color: '#E2E8F0', font: { family: 'Inter', weight: '600' } }
           },
           y: {
             min: 0,
             max: 10,
             grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: { color: '#8A94A6', font: { family: 'Inter' } }
+            ticks: { color: '#E2E8F0', font: { family: 'Inter', weight: '600' } }
           }
         },
         plugins: {
