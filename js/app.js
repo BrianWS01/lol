@@ -152,7 +152,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       const enemySelect = document.getElementById(`enemy_pick_${role}`);
       if (enemySelect) {
         enemySelect.innerHTML = `<option value="">-- Selecionar ${role} Inimigo --</option>`;
-        const allChamps = window.dataLoader.champions.filter(c => c.lanes.includes(role));
+        const allChamps = window.dataLoader.champions.filter(c => {
+          if (role === 'JUNGLE' || role === 'JG') {
+            return c.lanes.includes('JUNGLE') || c.lanes.includes('JG');
+          }
+          return c.lanes.includes(role);
+        });
+
+        // Sort alphabetically
+        allChamps.sort((a, b) => a.name.localeCompare(b.name));
 
         allChamps.forEach(c => {
           const opt = document.createElement('option');

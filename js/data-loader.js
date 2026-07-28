@@ -62,6 +62,9 @@ class DataLoader {
 
   getChampionsByRole(role) {
     if (!role) return this.champions;
+    if (role === 'JUNGLE' || role === 'JG') {
+      return this.champions.filter(c => c.lanes.includes('JUNGLE') || c.lanes.includes('JG'));
+    }
     return this.champions.filter(c => c.lanes.includes(role));
   }
 }
