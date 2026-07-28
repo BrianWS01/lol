@@ -1,0 +1,72 @@
+[
+  {
+    "champions": ["Jarvan IV", "Orianna"],
+    "name": "Cataclysm + Shockwave",
+    "description": "Jarvan prende os alvos na Ultimate (Cataclismo) enquanto a Esfera da Orianna puxa todos com o Comando: Onda de Choque.",
+    "tier": "S+",
+    "type": "Ultimate Combo"
+  },
+  {
+    "champions": ["Alistar", "Yasuo"],
+    "name": "Knockup + Last Breath",
+    "description": "O Ceifador/Pulso do Alistar arremessa múltiplos alvos ao ar ativando instantaneamente o Último Suspiro do Yasuo.",
+    "tier": "S",
+    "type": "Knockup Combo"
+  },
+  {
+    "champions": ["Rell", "Miss Fortune"],
+    "name": "Magnet Storm + Bullet Time",
+    "description": "Rell atrai e atordoa o time inimigo com a Tempestade Magnética permitindo que a Miss Fortune descarregue a Ultimate completa sem interrupção.",
+    "tier": "S+",
+    "type": "Wombocombo"
+  },
+  {
+    "champions": ["Nocturne", "Ryze"],
+    "name": "Paranoia + Realm Warp",
+    "description": "Nocturne retira a visão do mapa com Paranoia enquanto o Ryze teleporta a equipe diretamente para um gank sem aviso.",
+    "tier": "S",
+    "type": "Global Flank"
+  },
+  {
+    "champions": ["Nami", "Lucian"],
+    "name": "Tidecaller's Blessing Burst",
+    "description": "A Benção da Convocadora de Marés da Nami ativa com o Disparo Duplo do Lucian causando Lentidão e Dano Mágico massivo no Early Game.",
+    "tier": "S",
+    "type": "Lane Dominance"
+  },
+  {
+    "champions": ["Malphite", "Yasuo"],
+    "name": "Unstoppable Force + Last Breath",
+    "description": "Malphite projeta a equipe inimiga ao ar permitindo a entrada perfeita de Yasuo.",
+    "tier": "S+",
+    "type": "Knockup Combo"
+  },
+  {
+    "champions": ["Sejuani", "Renekton"],
+    "name": "Melee Stun Stacking",
+    "description": "Renekton aplica múltiplos acertos instantâneos com o W carregado completando as pilhas de Congelamento da Sejuani imediatamente.",
+    "tier": "A+",
+    "type": "Melee Synergy"
+  },
+  {
+    "champions": ["Diana", "Yasuo"],
+    "name": "Moonfall Knockup",
+    "description": "Diana puxa os inimigos ao redor arremessando-os ao ar e abrindo espaço para a Ultimate do Yasuo.",
+    "tier": "S",
+    "type": "Knockup Combo"
+  },
+  {
+    "champions": ["Seraphine", "Rell"],
+    "name": "Encore Chained CC",
+    "description": "Rell agrupa a equipe inimiga estendendo a distância do Encore da Seraphine para um encanto de 5 pessoas.",
+    "tier": "S+",
+    "type": "CC Chain"
+  },
+  {
+    "champions": ["Zilean", "Olaf"],
+    "name": "Speedy Ragnarok",
+    "description": "Zilean concede 99% de Velocidade de Movimento e Ressurreição ao Olaf, tornando o Ragnarok imparável no time inimigo.",
+    "tier": "A+",
+    "type": "Hyper-Buff"
+  }
+]

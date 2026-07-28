@@ -1,0 +1,51 @@
+{
+  "teamName": "WoodTec Esports",
+  "players": {
+    "TOP": {
+      "name": "Alcantara",
+      "role": "TOP",
+      "pools": {
+        "Main": ["Sett", "Mordekaiser", "Olaf", "Tryndamere", "Darius"],
+        "Tanques": ["Dr. Mundo", "Sion", "Zac", "Malphite"],
+        "Situacionais": ["Volibear", "Trundle", "Jax"],
+        "Flex": ["Swain", "Poppy", "Ryze", "Vladimir"],
+        "Outros": ["Ivern", "Vayne", "Graves", "Zilean"]
+      }
+    },
+    "JUNGLE": {
+      "name": "Rafa",
+      "role": "JUNGLE",
+      "pools": {
+        "Main": ["Viego", "Diana", "Lee Sin", "Jarvan IV", "Wukong", "Nocturne"],
+        "Tanques": ["Sejuani", "Maokai", "Zac"],
+        "Flex": ["Poppy", "Gragas"]
+      }
+    },
+    "MID": {
+      "name": "Leo",
+      "role": "MID",
+      "pools": {
+        "Main": ["Ahri", "Orianna", "Syndra", "Ryze", "Azir", "Akali", "Sylas"],
+        "Flex": ["Swain", "Vladimir"],
+        "Situacionais": ["Jayce", "Viktor", "Yone", "LeBlanc"]
+      }
+    },
+    "ADC": {
+      "name": "Duduzin",
+      "role": "ADC",
+      "pools": {
+        "Main": ["Xayah", "Caitlyn", "Jhin", "Lucian", "Miss Fortune", "Ezreal", "Tristana", "Jinx"],
+        "Flex": ["Ziggs", "Kai'Sa"]
+      }
+    },
+    "SUP": {
+      "name": "Brian",
+      "role": "SUP",
+      "pools": {
+        "Main": ["Alistar", "Rell", "Pyke", "Nami", "Poppy", "Seraphine"],
+        "Tanques": ["Nautilus", "Leona", "Braum"],
+        "Enchanters": ["Lulu", "Karma", "Thresh"]
+      }
+    }
+  }
+}

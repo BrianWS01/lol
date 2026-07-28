@@ -1,0 +1,96 @@
+[
+  {
+    "id": "front_to_back",
+    "name": "Front to Back",
+    "icon": "🛡️",
+    "description": "Composição focada em manter uma linha de frente sólida (Tanks/Lutadores) protegendo os Carries de dano constante (ADC/Mago).",
+    "objective": "Forçar lutas estruturadas em objetivos neutros (Dragão/Barão) em terreno aberto.",
+    "whenToUse": "Quando o time inimigo tiver assassinos ou mergulhadores e seu ADC/Mid puder causar alto dano por segundo com segurança.",
+    "strengths": ["Alta consistência em Team Fights", "Excelente controle de objetivos neutros", "Fácil execução tática"],
+    "weaknesses": ["Vulnerável a composições de Poke/Cerco pesadas", "Frágil se a linha de frente for ultrapassada ou isolada"],
+    "keyAttributes": ["frontline", "peel", "teamfight"],
+    "coachingTips": [
+      "Manter formação coesa em lutas.",
+      "Nunca deixar os carries desprotegidos em flanks.",
+      "Evitar lutas na selva sem visão prévia."
+    ]
+  },
+  {
+    "id": "engage",
+    "name": "Hard Engage / Wombocombo",
+    "icon": "⚔️",
+    "description": "Composição explosiva projetada para iniciar lutas rapidamente e encadear controle de grupo em massa (CC).",
+    "objective": "Pegar o time inimigo agrupado com ultimates devastadoras antes que consigam responder.",
+    "whenToUse": "Contra composições sem mobilidade, composições de Poke ou quando seu time possui forte sinergia de ultimates (ex: Jarvan + Orianna).",
+    "strengths": ["Capacidade imensa de virar partidas", "Força lutas nos seus próprios termos", "Cria pânico na equipe adversária"],
+    "weaknesses": ["Dependente do tempo de recarga das Ultimates", "Vulnerável se o engage for frustrado por Disengage/Peel"],
+    "keyAttributes": ["engage", "cc", "burst"],
+    "coachingTips": [
+      "Forçar lutas sempre que as Ultimates principais estiverem disponíveis.",
+      "Garantir controle de visão prévio em arbustos estratégicos para flanks.",
+      "Não gastar engage em alvos com Stopwatch/Zhonya ativo."
+    ]
+  },
+  {
+    "id": "split_push",
+    "name": "Split Push (1-3-1 / 1-4)",
+    "icon": "🚩",
+    "description": "Estratégia focada em pressionar múltiplas rotas simultaneamente com duelistas fortes de rota lateral.",
+    "objective": "Dividir o time inimigo no mapa, destruir estruturas e criar vantagem numérica no lado oposto.",
+    "whenToUse": "Quando seu Top ou Mid possuir campeões imbatíveis no 1v1 com alta mobilidade e pressão de torre (ex: Jax, Tryndamere, Ryze).",
+    "strengths": ["Gera pressão constante no mapa", "Evita lutas 5v5 diretas desfavoráveis", "Força erros de rotação do inimigo"],
+    "weaknesses": ["Requer excelente comunicação e controle de visão", "O grupo de 3 ou 4 pode ser iniciado e destruído se avançar demais"],
+    "keyAttributes": ["splitpush", "mobility", "waveclear"],
+    "coachingTips": [
+      "O duelista lateral deve sincronizar o avanço da wave com o objetivo neutro oposto.",
+      "O grupo do meio deve apenas conter o avanço sem iniciar lutas 4v5.",
+      "Usar Teleporte de forma inteligente para juntar na luta se o inimigo colapsar."
+    ]
+  },
+  {
+    "id": "poke_siege",
+    "name": "Poke & Siege",
+    "icon": "🎯",
+    "description": "Composição de longo alcance projetada para desgastar a vida dos adversários à distância antes das lutas.",
+    "objective": "Forçar o inimigo a recuar das torres e objetivos por estar com pouca vida.",
+    "whenToUse": "Contra composições lentas de Front-to-Back ou sem Engage direto de longa distância.",
+    "strengths": ["Garante torres e objetivos sem precisar lutar 5v5 com vida cheia", "Domínio de área e controle de funil"],
+    "weaknesses": ["Extremamente vulnerável a Flanks e Hard Engage", "Dificuldade se ficar atrás no ouro"],
+    "keyAttributes": ["poke", "siege", "waveclear"],
+    "coachingTips": [
+      "Chegar 30 a 40 segundos antes do objetivo nascer para estabelecer a zona de poke.",
+      "Manter wards nas laterais para evitar ser surpreendido.",
+      "Nunca entrar no alcance de combate corporal do inimigo."
+    ]
+  },
+  {
+    "id": "protect_carry",
+    "name": "Protect the Carry (Hypercarry)",
+    "icon": "👑",
+    "description": "Composição estruturada em torno de um único Hypercarry (ex: Jinx, Kog'Maw, Vayne) cercado por utilidade e Peel.",
+    "objective": "Manter o Hypercarry vivo a todo custo para que ele destrua a equipe inimiga nas lutas de fim de jogo.",
+    "whenToUse": "Quando você tem um especialista em ADC e o time puder draftar suportes/sololanes utilitários com escudos e cura (ex: Lulu, Nami, Seraphine, Shen).",
+    "strengths": ["Dano sustentado surreal no Late Game", "Quase imovível se bem posicionado"],
+    "weaknesses": ["Dependência total de um único jogador", "Se o Carry morrer, a composição não tem dano secundário"],
+    "keyAttributes": ["peel", "scaling", "sustain"],
+    "coachingTips": [
+      "Guardar todos os recursos defensivos (Exaustão, escudos, CC) exclusivamente para quem tentar chegar no Carry.",
+      "O Carry deve priorizar posicionamento seguro sobre causar dano arriscado."
+    ]
+  },
+  {
+    "id": "pickoff",
+    "name": "Pickoff / Catch",
+    "icon": "🦊",
+    "description": "Focada em isolar e eliminar um campeão inimigo fora de posição com CC único de longa distância ou rajada de dano rápida.",
+    "objective": "Criar vantagem numérica 5v4 instantânea no mapa antes de iniciar objetivos grandes.",
+    "whenToUse": "Quando o time adversário tiver campeões frágeis sem escape ou que precisem andar sozinhos para colocar visão.",
+    "strengths": ["Gera lutas 5v4 fáceis", "Aproveita erros de posicionamento do adversário", "Excelente para virar jogos através de névoa de guerra"],
+    "weaknesses": ["Menos eficiente em lutas 5v5 totalmente abertas e agrupadas"],
+    "keyAttributes": ["pickoff", "burst", "cc"],
+    "coachingTips": [
+      "Negar visão inimiga com Pink Wards e Oráculos.",
+      "Montar armadilhas na selva inimiga perto de caminhos de acesso aos objetivos."
+    ]
+  }
+]

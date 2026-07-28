@@ -1,0 +1,38 @@
+{
+  "dragon": {
+    "name": "Dragões Elementais & Ancião",
+    "icon": "🐉",
+    "keyAttributes": ["teamfight", "frontline", "dps", "sustain"],
+    "description": "Exige controle de zona em espaço aberto, sustentação e capacidade de focar lutas 5v5 nos funis do rio."
+  },
+  "baron": {
+    "name": "Barão Nashor",
+    "icon": "👾",
+    "keyAttributes": ["dps", "waveclear", "objective", "burst"],
+    "description": "Requer alto dano sustentado por segundo para derrotar o Barão rápido e capacidade de neutralizar viradas inimigas."
+  },
+  "herald": {
+    "name": "Arauto / Larvas do Vazio",
+    "icon": "👾",
+    "keyAttributes": ["early", "mobility", "pickoff"],
+    "description": "Favorece composições de forte Early Game com prioridade na rota do Top e Mid para controle inicial de mapa."
+  },
+  "siege": {
+    "name": "Cerco de Torres",
+    "icon": "🏰",
+    "keyAttributes": ["poke", "range", "waveclear"],
+    "description": "Necessita de campeões de longo alcance capazes de desgastar defensores e limpar tropas inimigas à distância."
+  },
+  "dive": {
+    "name": "Dive em Torre",
+    "icon": "💥",
+    "keyAttributes": ["frontline", "burst", "cc", "engage"],
+    "description": "Requer campeões capazes de resetar a agressão da torre ou absorver múltiplos disparos com escudos/invulnerabilidade."
+  },
+  "side": {
+    "name": "Pressão Lateral / Side Lane",
+    "icon": "🚩",
+    "keyAttributes": ["splitpush", "mobility", "early"],
+    "description": "Demanda duelistas independentes capazes de vencer confrontos 1v1 e escapar de rotações com segurança."
+  }
+}

@@ -1,0 +1,14 @@
+[
+  { "champion": "Sett", "versus": "Renekton", "winrate": 53.5, "status": "Favorável", "note": "Sett consegue trocar dano de forma superior com o Haymaker (W) quando Renekton usa o combo de E-W-Q." },
+  { "champion": "Sett", "versus": "Sion", "winrate": 56.2, "status": "Muito Favorável", "note": "Sett usa o R no Sion com muita vida máxima para causar dano avassalador no time inimigo agrupado." },
+  { "champion": "Mordekaiser", "versus": "Malphite", "winrate": 55.8, "status": "Favorável", "note": "Mordekaiser rouba os atributos defensivos do Malphite no Reino da Morte e causa dano mágico constante." },
+  { "champion": "Olaf", "versus": "Alistar", "winrate": 57.0, "status": "Favorável", "note": "Olaf ativa Ragnarok ficando imune a todo o controle de grupo do Alistar." },
+  { "champion": "Ahri", "versus": "Syndra", "winrate": 48.2, "status": "Desfavorável", "note": "Syndra possui maior alcance e cancela a investida da Ahri com o Dispersar os Fracos (E)." },
+  { "champion": "Orianna", "versus": "Akali", "winrate": 52.8, "status": "Favorável", "note": "Orianna pune a Akali nas primeiras rotas com pokes contínuos de auto-ataque e esferas." },
+  { "champion": "Sylas", "versus": "Malphite", "winrate": 58.5, "status": "Extremamente Favorável", "note": "Sylas rouba a Ultimate do Malphite e a utiliza com escalamento de AP massivo." },
+  { "champion": "Caitlyn", "versus": "Vayne", "winrate": 54.1, "status": "Favorável", "note": "Voz e alcance da Caitlyn esmagam a Vayne na fase de rotas inicial." },
+  { "champion": "Xayah", "versus": "Rengar", "winrate": 53.8, "status": "Favorável", "note": "Xayah fica inalvejável com a Tempestade de Plumas (R) neutralizando o pulo do assassino." },
+  { "champion": "Lucian", "versus": "Ezreal", "winrate": 52.4, "status": "Favorável", "note": "Lucian consegue impor ritmo de jogo e trocas agressivas curtas mais rápidas que o Ezreal." },
+  { "champion": "Poppy", "versus": "Lee Sin", "winrate": 55.0, "status": "Favorável", "note": "A Presença Inabalável (W) da Poppy bloqueia a investida da Onda Sônica/Ataque Ressonante de Lee Sin." },
+  { "champion": "Alistar", "versus": "Pyke", "winrate": 53.9, "status": "Favorável", "note": "Alistar pune o Pyke quando ele tenta puxar, virando o combate instantaneamente." }
+]

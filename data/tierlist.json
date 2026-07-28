@@ -1,0 +1,7 @@
+{
+  "metaVersion": "14.15",
+  "bansPriority": ["Orianna", "Jarvan IV", "Rell", "Ahri", "Viego", "Xayah", "Sett", "Alistar", "Syndra", "Caitlyn"],
+  "tierS": ["Orianna", "Jarvan IV", "Rell", "Xayah", "Alistar", "Ahri", "Sett", "Viego"],
+  "tierA": ["Caitlyn", "Jhin", "Lucian", "Lee Sin", "Syndra", "Ryze", "Poppy", "Nami", "Sejuani", "Mordekaiser", "Olaf"],
+  "tierB": ["Miss Fortune", "Ezreal", "Tristana", "Jinx", "Akali", "Sylas", "Azir", "Diana", "Wukong", "Nocturne", "Pyke", "Seraphine", "Ziggs", "Kai'Sa"]
+}

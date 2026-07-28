@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRAFTLAB - League of Legends Competitive Draft Assistant</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- DRAFTLAB Style System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="app-header d-flex justify-content-between align-items-center">
+    <div class="brand-logo">
+      <div class="logo-icon">DL</div>
+      <div>
+        <span>DRAFTLAB</span>
+        <span class="badge-pro">PRO 2.0</span>
+      </div>
+    </div>
+
+    <!-- Main Navigation Tabs -->
+    <ul class="nav nav-pills nav-pills-custom">
+      <li class="nav-item">
+        <a class="nav-link active" data-tab="tab-dashboard" href="#">⚡ Novo Draft</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="tab-strategies" href="#">📚 Estratégias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="tab-comps" href="#">💾 Comps Salvas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="tab-history" href="#">📜 Histórico & Backup</a>
+      </li>
+    </ul>
+
+    <!-- Header Quick Actions -->
+    <div class="d-flex align-items-center gap-2">
+      <button id="sideToggleBtn" class="btn btn-sm btn-outline-custom">
+        <span id="sideBadge" class="badge bg-info text-dark p-2">MEU TIME: BLUE SIDE 🟦</span>
+      </button>
+      <button id="resetDraftBtn" class="btn btn-sm btn-outline-custom">↺ Limpar</button>
+      <button id="saveDraftBtn" class="btn btn-gold btn-sm">💾 Salvar Draft</button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container-fluid p-3 p-md-4">
+
+    <!-- ================= TAB 1: DASHBOARD / DRAFT SYSTEM ================= -->
+    <section id="tab-dashboard" class="tab-panel active">
+      
+      <!-- Turn Indicator Banner -->
+      <div class="turn-banner">
+        <div class="d-flex align-items-center gap-3">
+          <span id="activeTurnBadge" class="turn-badge blue-turn">Blue Ban 1</span>
+          <span id="turnStepText" class="fw-bold text-main fs-6">Passo 1/20: BANIR - MEU TIME (Blue Ban 1)</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button id="prevStepBtn" class="btn btn-sm btn-outline-custom">◄ Anterior</button>
+          <button id="nextStepBtn" class="btn btn-sm btn-outline-custom">Próximo ►</button>
+        </div>
+      </div>
+
+      <!-- Main Draft Workspace Grid -->
+      <div class="row g-3">
+
+        <!-- LEFT COLUMN: MEU TIME (MY TEAM) & BANS -->
+        <div class="col-lg-3">
+          <div class="dl-card team-header-blue mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">🟦 MEU TIME (WoodTec)</span>
+              <span class="fs-7 text-cyan">Roster da Equipe</span>
+            </div>
+
+            <!-- 5 Role Picks -->
+            <!-- TOP (Alcantara) -->
+            <div class="pick-slot">
+              <div id="my_avatar_TOP" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="role-badge">TOP</span>
+                  <span class="fs-7 text-gold fw-bold">Alcantara</span>
+                </div>
+                <select id="my_pick_TOP" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- JUNGLE (Rafa) -->
+            <div class="pick-slot">
+              <div id="my_avatar_JUNGLE" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="role-badge">JUNGLE</span>
+                  <span class="fs-7 text-gold fw-bold">Rafa</span>
+                </div>
+                <select id="my_pick_JUNGLE" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- MID (Leo) -->
+            <div class="pick-slot">
+              <div id="my_avatar_MID" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="role-badge">MID</span>
+                  <span class="fs-7 text-gold fw-bold">Leo</span>
+                </div>
+                <select id="my_pick_MID" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- ADC (Duduzin) -->
+            <div class="pick-slot">
+              <div id="my_avatar_ADC" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="role-badge">ADC</span>
+                  <span class="fs-7 text-gold fw-bold">Duduzin</span>
+                </div>
+                <select id="my_pick_ADC" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- SUP (Brian) -->
+            <div class="pick-slot">
+              <div id="my_avatar_SUP" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="role-badge">SUP</span>
+                  <span class="fs-7 text-gold fw-bold">Brian</span>
+                </div>
+                <select id="my_pick_SUP" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- Bans Phase (Meu Time) -->
+            <div class="mt-3 pt-2 border-top border-secondary">
+              <span class="fs-7 text-muted d-block mb-1">BANS DO MEU TIME (5)</span>
+              <div class="d-flex gap-1">
+                <select id="my_ban_0" class="champ-select fs-7"></select>
+                <select id="my_ban_1" class="champ-select fs-7"></select>
+                <select id="my_ban_2" class="champ-select fs-7"></select>
+                <select id="my_ban_3" class="champ-select fs-7"></select>
+                <select id="my_ban_4" class="champ-select fs-7"></select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CENTER COLUMN: ANALYTICAL ENGINE & CHARTS -->
+        <div class="col-lg-6">
+          
+          <!-- Top Analytics Row: Score + Archetype Styles -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-5">
+              <div class="score-box">
+                <div class="text-muted fs-7 text-uppercase fw-bold">Score da Composição</div>
+                <div id="overallScoreNum" class="score-number">0/100</div>
+                <div id="overallScoreStars" class="score-stars">☆☆☆☆☆</div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="dl-card h-100">
+                <div class="dl-card-header mb-2">
+                  <span class="dl-card-title">Estilo Real da Composição</span>
+                </div>
+                <div id="archetypeHierarchyBox" class="mb-3">
+                  <span class="text-muted fs-7">Selecione campeões para calcular arquétipos...</span>
+                </div>
+                <div class="text-muted fs-7">
+                  <strong>Hierarquia Tática:</strong> Analisada via pesos numéricos de 1 a 10 para cada atributo tático.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Radar Chart & Power Curve Row -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="dl-card">
+                <div class="dl-card-header">
+                  <span class="dl-card-title">📊 Radar da Composição</span>
+                </div>
+                <div style="height: 240px; position: relative;">
+                  <canvas id="compositionRadarCanvas"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="dl-card">
+                <div class="dl-card-header">
+                  <span class="dl-card-title">📈 Curva de Poder (Power Curve)</span>
+                </div>
+                <div style="height: 240px; position: relative;">
+                  <canvas id="powerCurveCanvas"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Damage Heatmap & Trait Bars -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">🔥 Distribution & Heatmap de Dano</span>
+            </div>
+            
+            <div class="row align-items-center mb-3">
+              <div class="col-md-4 text-center">
+                <span id="adPercentText" class="badge bg-danger fs-6">50% AD</span>
+              </div>
+              <div class="col-md-4 text-center">
+                <span id="apPercentText" class="badge bg-primary fs-6">50% AP</span>
+              </div>
+              <div class="col-md-4 text-center">
+                <span id="truePercentText" class="badge bg-warning text-dark fs-6">0% True</span>
+              </div>
+              <div class="col-12">
+                <div class="damage-bar-multi">
+                  <div id="dmgBarAd" class="dmg-ad" style="width: 50%;"></div>
+                  <div id="dmgBarAp" class="dmg-ap" style="width: 50%;"></div>
+                  <div id="dmgBarTrue" class="dmg-true" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Intensity Trait Progress Bars -->
+            <div class="row g-2 fs-7">
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Engage</span></div>
+                  <div class="dl-progress"><div id="barEngage" class="dl-progress-fill bg-info" style="width: 0%;"></div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Peel / Proteção</span></div>
+                  <div class="dl-progress"><div id="barPeel" class="dl-progress-fill bg-success" style="width: 0%;"></div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Split Push</span></div>
+                  <div class="dl-progress"><div id="barSplit" class="dl-progress-fill bg-warning" style="width: 0%;"></div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Poke & Cerco</span></div>
+                  <div class="dl-progress"><div id="barPoke" class="dl-progress-fill bg-primary" style="width: 0%;"></div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Scaling / Late</span></div>
+                  <div class="dl-progress"><div id="barScaling" class="dl-progress-fill bg-secondary" style="width: 0%;"></div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="trait-bar-container">
+                  <div class="trait-bar-label"><span>Frontline / Tanque</span></div>
+                  <div class="dl-progress"><div id="barFrontline" class="dl-progress-fill bg-danger" style="width: 0%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PRO COACH REPORT SECTION -->
+          <div class="coach-section mb-3">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="fs-4">📋</span>
+              <h5 class="m-0 text-gold font-heading">Relatório Tático de Coach</h5>
+            </div>
+            <div id="coachReportBox">
+              <span class="text-muted fs-7">Selecione campeões para gerar as diretrizes táticas de jogo.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: TIME INIMIGO & ANALYSIS SIDEBAR -->
+        <div class="col-lg-3">
+          
+          <!-- Enemy Team Pick Slots -->
+          <div class="dl-card team-header-red mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">🟥 TIME INIMIGO</span>
+              <span class="fs-7 text-muted">Draft Adversário</span>
+            </div>
+
+            <!-- 5 Enemy Slots -->
+            <div class="pick-slot">
+              <div id="enemy_avatar_TOP" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <span class="role-badge text-danger">TOP Inimigo</span>
+                <select id="enemy_pick_TOP" class="champ-select"></select>
+              </div>
+            </div>
+
+            <div class="pick-slot">
+              <div id="enemy_avatar_JUNGLE" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <span class="role-badge text-danger">JUNGLE Inimigo</span>
+                <select id="enemy_pick_JUNGLE" class="champ-select"></select>
+              </div>
+            </div>
+
+            <div class="pick-slot">
+              <div id="enemy_avatar_MID" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <span class="role-badge text-danger">MID Inimigo</span>
+                <select id="enemy_pick_MID" class="champ-select"></select>
+              </div>
+            </div>
+
+            <div class="pick-slot">
+              <div id="enemy_avatar_ADC" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <span class="role-badge text-danger">ADC Inimigo</span>
+                <select id="enemy_pick_ADC" class="champ-select"></select>
+              </div>
+            </div>
+
+            <div class="pick-slot">
+              <div id="enemy_avatar_SUP" class="champ-avatar">🛡️</div>
+              <div class="w-100">
+                <span class="role-badge text-danger">SUP Inimigo</span>
+                <select id="enemy_pick_SUP" class="champ-select"></select>
+              </div>
+            </div>
+
+            <!-- Bans Phase (Enemy Team) -->
+            <div class="mt-3 pt-2 border-top border-secondary">
+              <span class="fs-7 text-muted d-block mb-1">BANS DO INIMIGO (5)</span>
+              <div class="d-flex gap-1">
+                <select id="enemy_ban_0" class="champ-select fs-7"></select>
+                <select id="enemy_ban_1" class="champ-select fs-7"></select>
+                <select id="enemy_ban_2" class="champ-select fs-7"></select>
+                <select id="enemy_ban_3" class="champ-select fs-7"></select>
+                <select id="enemy_ban_4" class="champ-select fs-7"></select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Direct Matchups Card -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">⚔️ Matchups de Lane</span>
+            </div>
+            <div id="laneMatchupsBox">
+              <span class="text-muted fs-7">Aguardando escolhas opostas...</span>
+            </div>
+          </div>
+
+          <!-- Objectives Matrix Card -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">🐉 Matriz de Objetivos</span>
+            </div>
+            <div id="objectivesMatrixBox" class="fs-7">
+              <span class="text-muted">Calculando aptidões...</span>
+            </div>
+          </div>
+
+          <!-- Synergies Card -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">✨ Sinergias & Combos</span>
+            </div>
+            <div id="synergiesBox">
+              <span class="text-muted fs-7">Procurando combos...</span>
+            </div>
+          </div>
+
+          <!-- Alerts Card -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">🚨 Alertas do Draft</span>
+            </div>
+            <div id="alertsBox" class="fs-7">
+              <span class="text-muted">Nenhum alerta.</span>
+            </div>
+          </div>
+
+          <!-- Next Pick & Ban Suggestions Card -->
+          <div class="dl-card mb-3">
+            <div class="dl-card-header">
+              <span class="dl-card-title">💡 Sugestão Inteligente</span>
+            </div>
+            <div id="recommendationsBox" class="fs-7">
+              <span class="text-muted">Aguardando picks...</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= TAB 2: ESTRATÉGIAS ================= -->
+    <section id="tab-strategies" class="tab-panel">
+      <div class="dl-card mb-4">
+        <h3 class="text-gold font-heading">📚 Biblioteca de Estratégias Competitivas</h3>
+        <p class="text-muted m-0">Guia tático completo das principais composições e conceitos de draft do League of Legends.</p>
+      </div>
+      <div id="strategyLibraryContainer" class="row"></div>
+    </section>
+
+    <!-- ================= TAB 3: COMPS SALVAS ================= -->
+    <section id="tab-comps" class="tab-panel">
+      <div class="dl-card mb-4">
+        <h3 class="text-gold font-heading">💾 Composições Salvas</h3>
+        <p class="text-muted m-0">Armazene composições pré-definidas para reutilizar rapidamente durante os treinos e partidas.</p>
+      </div>
+      <div id="savedCompsContainer" class="row"></div>
+    </section>
+
+    <!-- ================= TAB 4: HISTÓRICO & BACKUP ================= -->
+    <section id="tab-history" class="tab-panel">
+      <div class="dl-card mb-4 d-flex justify-content-between align-items-center">
+        <div>
+          <h3 class="text-gold font-heading m-0">📜 Histórico de Drafts & Exportação</h3>
+          <p class="text-muted m-0 fs-7">Visualize o histórico e exporte/importe backups em arquivos JSON.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button id="exportJsonBtn" class="btn btn-gold btn-sm">⬇️ Exportar JSON</button>
+          <label class="btn btn-cyan btn-sm m-0">
+            ⬆️ Importar JSON
+            <input type="file" id="importJsonInput" accept=".json" style="display: none;">
+          </label>
+        </div>
+      </div>
+
+      <div class="dl-card">
+        <div class="table-responsive">
+          <table class="table table-dark table-hover align-middle m-0">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Lado</th>
+                <th>Meu Time</th>
+                <th>Inimigo</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="historyTableBody">
+              <tr>
+                <td colspan="6" class="text-center text-muted">Carregando histórico...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Load JavaScript Modules in Sequence -->
+  <script src="js/data-loader.js"></script>
+  <script src="js/player-pools.js"></script>
+  <script src="js/draft-order-engine.js"></script>
+  <script src="js/draft-engine.js"></script>
+  <script src="js/coach-report.js"></script>
+  <script src="js/chart-manager.js"></script>
+  <script src="js/history-manager.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
